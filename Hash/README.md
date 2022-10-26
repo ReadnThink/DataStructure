@@ -23,6 +23,9 @@ ex) Seoyoon, Yoonseo = Hash()가 리턴하는 아스키코드의 합이 같아�
     }
 ```
 
+## 해결 방법
+1. 
+
 # Hash vs HashTable
 Hash → 자체는 특정 값을 리턴하는 함수(메소드)<br>
 HashTable → Hash를 써서 값에 접근하는 자료구조

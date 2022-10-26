@@ -26,9 +26,10 @@ public class HashTable {
     }
 
     public void insert(String key, Integer value){
+        System.out.print("key = " + key + "      value = " + value);
         int hashCode = hash(key);
         this.table[hash(key)] = value;
-        System.out.println(hashCode + "방에 저장이 완료되었습니다.");
+        System.out.println("     " + hashCode + "방에 저장이 완료되었습니다.");
     }
     public int search(String key){
         return this.table[hash(key)];

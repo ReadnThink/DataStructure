@@ -1,18 +1,18 @@
 package hash;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
 
-public class HashTableSolultion {
+public class HashTableSolultionWithMap {
     int size = 10000;
-    List<Node>[] table = new ArrayList[size];
+    List<Map<String,Integer>>[] table = new ArrayList[size];
 
-    public HashTableSolultion() {
+    public HashTableSolultionWithMap() {
     }
 
-    public HashTableSolultion(int size) {
+    public HashTableSolultionWithMap(int size) {
         this.size = size;
         this.table = new ArrayList[size];
     }
@@ -54,20 +54,23 @@ public class HashTableSolultion {
             this.table[hashIdx] = new ArrayList<>();
         }
         //map, object
-        this.table[hashIdx].add(new Node(key, value));
+        HashMap<String, Integer> hm = new HashMap<>();
+        hm.put(key, value);
+        this.table[hashIdx].add(hm);
     }
     public Integer get(String key){
-        List<Node> nodes = this.table[hash(key)];
-        for (Node node : nodes) {
-            if(key.equals(node.getKey())){
-                return node.value;
-            }
+        List<Map<String, Integer>> nodes = this.table[hash(key)];
+        for (Map<String,Integer> node : nodes) {
+//            // key가 일치하는지 확인하는 로직 필요
+//            if(key.equals(node.)){
+//                return node.value;
+//            }
         }
         return null;
     }
 
     public static void main(String[] args) {
-        HashTableSolultion hs = new HashTableSolultion();
+        HashTableSolultionWithMap hs = new HashTableSolultionWithMap();
         hs.insert("Yoonseo", 1);
         hs.insert("Seoyoon", 2);
 
