@@ -1,4 +1,4 @@
-public class 계산기 {
+public class 삼육구 {
 
     public static int solution1(int num){
         int cnt = 0;
@@ -23,7 +23,7 @@ public class 계산기 {
 
 
     public static void main(String[] args) {
-        int num = 133;
+        int num = 13;
         makeAnswer(num);
     }
 }
