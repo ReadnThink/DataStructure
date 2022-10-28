@@ -22,6 +22,7 @@ public class 완주하지못한선수inClass {
         System.out.println(answer);
         return answer;
     }
+
     //시간이 남아 배열로도 문제를 풀어보았다.
     public static String solutionArray(String[] participant, String[] completion){
         String answer = "";
