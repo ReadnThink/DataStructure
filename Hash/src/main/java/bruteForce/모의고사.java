@@ -1,5 +1,7 @@
 package bruteForce;
 
+import java.util.Arrays;
+
 public class 모의고사 {
     public static int[] solution(int[] answers) {
 
@@ -21,20 +23,24 @@ public class 모의고사 {
                 max = cnt[i];
         }
         //max와 학생들 점수 비교
-        StringBuilder result = new StringBuilder(); // return 정답값
-        if(cnt[0] == max) result.append(1);
-        if(cnt[1] == max) result.append(2);
-        if(cnt[2] == max) result.append(3);
+        StringBuilder sb = new StringBuilder(); // return 정답값
+        if(cnt[0] == max) sb.append(1);
+        if(cnt[1] == max) sb.append(2);
+        if(cnt[2] == max) sb.append(3);
 
-        //중복일 경우 [,] 넣기...
+        int[] result = new int[sb.length()]; // sb의 길이만큼 = max가 같은 수만틈 배열생성
+        for (int i = 0; i < sb.length(); i++) {
+            result[i] = sb.charAt(i) - '0'; //Atoi 로직으로 Character를 int배열에 옮기기 해결!
+        }
 
-
-        System.out.println(result.toString());
-        return cnt;
+        System.out.println(Arrays.toString(result));
+        return result;
     }
 
     public static void main(String[] args) {
-        int[] answers = {1,3,2,4,2};
-        solution(answers);
+//        int[] answers = {1,3,2,4,2}; // 1,2,3
+        int[] answers1 = {1,2,3,4,5}; // 1
+//        solution(answers);
+        solution(answers1);
     }
 }
