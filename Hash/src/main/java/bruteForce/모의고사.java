@@ -9,7 +9,7 @@ public class 모의고사 {
 
         int[] cnt = new int[3];
         for (int i = 0; i < answers.length; i++) {
-            if(student1[i % answers.length] == answers[i]){
+            if(student1[i % student1.length] == answers[i]){
                 cnt[0]++;
             }
         }
@@ -18,7 +18,7 @@ public class 모의고사 {
     }
 
     public static void main(String[] args) {
-        int[] answers = {1, 2, 1, 4, 5};
+        int[] answers = {1, 2, 3, 4, 5, 0, 0, 0, 0 ,5};
         solution(answers);
     }
 }
