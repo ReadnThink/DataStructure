@@ -5,8 +5,7 @@ import java.util.HashSet;
 public class 전화번호목록 {
     /*
      * O(N^2)으로 코딩하면
-     * phone_book 으로 반복 // 100만
-     * phone_book 으로 반복 // 100만
+     * nums 으로 반복 // 100만
      * indexOf로 판별 // 100만 * 100만
      * */
     public static boolean solution(String[] nums) {
