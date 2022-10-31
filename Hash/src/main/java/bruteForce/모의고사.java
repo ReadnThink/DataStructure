@@ -21,12 +21,14 @@ public class 모의고사 {
                 max = cnt[i];
         }
         //max와 학생들 점수 비교
-        StringBuilder result = new StringBuilder();
+        StringBuilder result = new StringBuilder(); // return 정답값
         if(cnt[0] == max) result.append(1);
         if(cnt[1] == max) result.append(2);
         if(cnt[2] == max) result.append(3);
 
         //중복일 경우 [,] 넣기...
+
+
         System.out.println(result.toString());
         return cnt;
     }
