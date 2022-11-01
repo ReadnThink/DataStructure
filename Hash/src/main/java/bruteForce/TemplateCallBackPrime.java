@@ -12,6 +12,14 @@ public class TemplateCallBackPrime {
         return a < b;
     }
 
+    boolean someOperation1(int a, int b){
+        return a < b / 2;
+    }
+
+    boolean someOperation2(int a, int b){
+        return a * a < b;
+    }
+
     boolean isPrime(int n){
         for (int i = 2; someOperation(i, n); i++) {
             if(n % i == 0) return false;
