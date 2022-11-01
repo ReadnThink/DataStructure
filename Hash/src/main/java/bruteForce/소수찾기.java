@@ -1,8 +1,17 @@
 package bruteForce;
 
 public class 소수찾기 {
+
+    TemplateCallBack templateCallBack;
+
+    public 소수찾기(TemplateCallBack templateCallBack) {
+        this.templateCallBack = templateCallBack;
+    }
+
     public static boolean isPrime (int n) {
         // 2, 3, 5, 7, 9, 11, 13, 15, 17
+
+        //Template callback
         for (int i = 2; i <= n / 2; i++) {
             System.out.printf("%d mod %d = %d\n",i,n,n%i);
             if(n % i == 0){
