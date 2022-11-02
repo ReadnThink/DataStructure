@@ -13,10 +13,19 @@ public class 에라토스테네스의체 {
         for (int i = 2; i <= 50; i++) {
             list.add(i);
         }
+
         for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+            if(list.get(i) % 2 == 0 && list.get(i) > 2) list.remove(i);
         }
-        System.out.println("List size = " + list.size());
+//        list.removeIf(lis -> lis % 2 == 0 && lis > 2);
+
+        System.out.println(list);
+        System.out.println(list.size());
+
+
+//        for (Integer integer : list) {
+//            System.out.println(list.get(integer));
+//        }
     }
 
     public static void main(String[] args) {
