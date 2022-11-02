@@ -1,4 +1,4 @@
-package bruteForce;
+package bruteForce.소수찾기;
 
 public class 소수찾기 {
 

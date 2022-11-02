@@ -1,7 +1,4 @@
-package bruteForce;
-
-import javax.sound.sampled.EnumControl;
-import java.util.Enumeration;
+package bruteForce.소수찾기;
 
 interface StatementStrategy{
     boolean compare(int a, int b);
@@ -11,6 +8,8 @@ public class TemplateCallBackPrime {
     // i < num / 2
     // i * i < num
 
+    // TemplateCallback =  함수를 매개변수(parameter)로 받고 싶을 때
+    // i 와 논리연산을 처리를 하는것이 문제였는데 논리연산 = boolean이다라는 것이 중요한 포인트였다.
     boolean isPrime(int n, StatementStrategy stmt){
         for (int i = 2; stmt.compare(i, n); i++) {
             if(n % i == 0) return false;
