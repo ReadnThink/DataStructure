@@ -10,12 +10,13 @@ public class 에라토스테네스의체 {
     public void solution(int n){
         List<Integer> list = new ArrayList<>();
 
-        for (int i = 2; i < 50; i++) {
+        for (int i = 2; i <= 50; i++) {
             list.add(i);
         }
-        for (Integer integer : list) {
-            System.out.println(list.get(integer));
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
         }
+        System.out.println("List size = " + list.size());
     }
 
     public static void main(String[] args) {
