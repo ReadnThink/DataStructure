@@ -11,7 +11,6 @@ public class 에라토스테네스의체List {
 
 
     // 시간초과 why??
-    // remove를 할 때 list.get(i)를 하게되는데 list의 get(i)만큼 index위치를 찾아간다는 소리이기 때문에
     // list에서 remove를 할 때 현재 배열보다 -1개 작은배열을 만들고 그 배열에 지울 번쨰의
     public int solution(int n){
         List<Integer> list = new ArrayList<>();
