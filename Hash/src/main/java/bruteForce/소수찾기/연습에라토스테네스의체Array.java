@@ -11,27 +11,23 @@ public class 연습에라토스테네스의체Array {
     //1. 리스트를 안쓰기 때문에 add, remove를 하지 않아도 된다.
     //2. %연산을 하지 않는것. : 남아있는 소수를 지우기 떄문.
 
-    public static int solutionWithCheck(int N) {
-        if (N == 2) return 1;
-        int[] nums = new int[N-1]; // N-1개만큼 2~50까지 총 49개
-        boolean[] checks = new boolean[nums.length]; // nums만큼 checks생성
-        Arrays.fill(checks, true); // checks를 true로 초기화 cuz 기본값 false
-        for (int i = 0; i < nums.length; i++) nums[i] = i + 2; // 2~49까지 nums에 채우기
+    public static void solutionWithCheck(int n) {
+        boolean[] checks = new boolean[n + 1];
+        int[] nums = new int[n + 1];
+        for (int i = 0; i < nums.length; i++) nums[i] = i;
+        checks[0] = true;
+        checks[1] = true;
 
-        for (int j = 0; j * j <= N; j++) {// N == 49
-            int multipleOf = nums[j]; // j=0 nums[0] = 2
-            // 초항이 2 2n인 2 4 6 8 10
-            for (int i = nums[j] + j; i < nums.length; i+=multipleOf) {
-                checks[i] = false;
+        //2부터 체크
+        for(int i = 2; i * i <= n; i++){
+            if(checks[i] == true) continue;
+            for (int j = i + i; j <= n; j += i) {
+                checks[j] = true;
             }
-//            printNums(nums, checks);
         }
-        int cnt = 0;
-        for (int i = 0; i < checks.length; i++) {
-            if(checks[i]) cnt++;
+        for (int i = 0; i <= n; i++) {
+            if(!checks[i]) System.out.printf("%d ",nums[i]);
         }
-        return cnt;
-
     }
 
     public static void solutionOnly(int n){
@@ -50,7 +46,9 @@ public class 연습에라토스테네스의체Array {
     }
 
     public static void main(String[] args) {
-        System.out.println(solutionWithCheck(15));
-//        solutionOnly(15);
+        int n = 50;
+        solutionWithCheck(n);
+        System.out.println();
+        solutionOnly(n);
     }
 }
