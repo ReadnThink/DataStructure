@@ -25,9 +25,15 @@ public class 연습에라토스테네스의체Array {
                 checks[j] = true;
             }
         }
+        int cnt = 0;
         for (int i = 0; i <= n; i++) {
-            if(!checks[i]) System.out.printf("%d ",nums[i]);
+            if(!checks[i]){
+                cnt++;
+                System.out.printf("%d ",nums[i]);
+            }
         }
+        System.out.println();
+        System.out.println("cnt = " + cnt);
     }
 
     public static void solutionOnly(int n){
@@ -48,7 +54,7 @@ public class 연습에라토스테네스의체Array {
     public static void main(String[] args) {
         int n = 50;
         solutionWithCheck(n);
-        System.out.println();
-        solutionOnly(n);
+//        System.out.println();
+//        solutionOnly(n);
     }
 }
