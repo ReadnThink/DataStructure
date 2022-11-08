@@ -1,7 +1,5 @@
 package Queue;
 
-import bruteForce.소수찾기.에라토스테네스의체List;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;

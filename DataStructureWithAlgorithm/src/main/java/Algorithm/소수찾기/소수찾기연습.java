@@ -1,4 +1,4 @@
-package bruteForce.소수찾기;
+package Algorithm.소수찾기;
 
 public class 소수찾기연습 {
     // 1. n이 소수인지 확인 = 성공

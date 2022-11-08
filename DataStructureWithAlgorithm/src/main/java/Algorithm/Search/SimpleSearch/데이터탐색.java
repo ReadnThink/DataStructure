@@ -1,20 +1,15 @@
-package bruteForce;
+package Algorithm.Search.SimpleSearch;
 
 import java.util.Scanner;
 
 public class 데이터탐색 {
     public static int solution(int[] nums, int n){
-        int idx = 1;
-        boolean check = false;
         for(int i = 0; i < nums.length; i++){
             if(nums[i] == n){
-                check = true;
-                break;
+                return i + 1;
             }
-            idx++;
         }
-        if(check == false) return -1;
-        return idx;
+        return -1;
     }
 
     public static void main(String[] args) {

@@ -1,8 +1,4 @@
-package bruteForce.소수찾기;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package Algorithm.소수찾기;
 
 public class 연습에라토스테네스의체Array {
      // 소수를 구할 때 2부터 N의 제곱근까지만 확인을 하면 된다는 이론

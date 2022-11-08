@@ -1,4 +1,4 @@
-package bruteForce;
+package Algorithm;
 
 public class 하샤드수 {
     // Int를 String 객체로 만들고, 다시 Int로 만들기 때문에 solution보다는 비효율적이다.

@@ -1,4 +1,4 @@
-package bruteForce.소수찾기;
+package Algorithm.소수찾기;
 
 interface StatementStrategy{
     boolean compare(int a, int b);

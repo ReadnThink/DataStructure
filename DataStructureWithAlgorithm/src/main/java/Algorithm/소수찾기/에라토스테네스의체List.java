@@ -1,4 +1,4 @@
-package bruteForce.소수찾기;
+package Algorithm.소수찾기;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
