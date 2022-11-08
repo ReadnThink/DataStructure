@@ -1,31 +1,11 @@
 package Algorithm.Search.BinarySearch;
 
+import java.util.Scanner;
+
 public class BinarySearch {
 
-//    public static int myBinarySearch(int[] nums, int target){
-//
-//        int start = 0;
-//        int last = nums.length - 1;
-//        int middle;
-//        //중간값 찾기
-//        middle = (start + last) / 2;
-//
-//        //같은지 비교하기
-//        if(nums[middle] == target) return middle;
-//
-//        //인덱스 옮기기
-//        if(nums[middle] > target){
-//            start = middle + 1;
-//        } else if (nums[middle] < target) {
-//            last = middle - 1;
-//        }
-//        myBinarySearch(nums, target);
-//    }
+    public static int myBinarySearch(int[] nums, int targetNum){
 
-    public static void main(String[] args) {
-        int[] nums = new int[]{1,2,3,4,5,6,7,8,9,10,11};
-        int targetNum = 7;
-        //중간값 찾기
         int startIdx = 0;
         int endIdx = nums.length - 1;
         int targetIdx = -1;
@@ -41,12 +21,20 @@ public class BinarySearch {
                 startIdx = midIdx + 1;
             } else {
                 // 같은지 비교
-                System.out.println(midIdx);
                 targetIdx = midIdx;
                 break;
             }
         }
-        System.out.println(targetIdx);
-
+        return targetIdx;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        int[] nums = new int[T];
+        for (int i = 0; i < T; i++) {
+            nums[i] = sc.nextInt();
+        }
+        int targetNum = sc.nextInt();
+        System.out.println(myBinarySearch(nums,targetNum));
     }
 }
