@@ -1,7 +1,6 @@
 package Algorithm.Sort;
 
 import java.util.Arrays;
-
 public class 선택정렬 {
 
     public static void swap(int[] nums, int i, int j){
