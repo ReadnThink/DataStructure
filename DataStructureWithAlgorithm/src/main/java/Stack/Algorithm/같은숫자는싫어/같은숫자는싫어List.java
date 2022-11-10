@@ -1,9 +1,9 @@
-package Stack.Algorithm;
+package Stack.Algorithm.같은숫자는싫어;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class 같은숫자는싫어 {
+public class 같은숫자는싫어List {
     // SET에 넣는다 = 모든 중복이 사라진다, 순서보장 x
     public static int[] solution(int[] nums) {
         List<Integer> list = new ArrayList<>();
