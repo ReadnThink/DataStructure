@@ -1,4 +1,4 @@
-package Queue.Algorithm;
+package Stack.Algorithm.같은숫자는싫어;
 
 import java.util.ArrayList;
 import java.util.List;

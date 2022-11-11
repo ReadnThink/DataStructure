@@ -5,6 +5,7 @@ import java.util.List;
 
 public class 같은숫자는싫어List {
     // SET에 넣는다 = 모든 중복이 사라진다, 순서보장 x
+    // List는 항상 add, remove될때 객체가 하나 더 생성된다. 숫자가 커지면 비효율적이다.
     public static int[] solution(int[] nums) {
         List<Integer> list = new ArrayList<>();
         int num = -1;
