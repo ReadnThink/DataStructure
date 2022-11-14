@@ -10,19 +10,20 @@ public class 에라토스테네스의체복습 {
 
         for (int i = 2; i*i <= n; i++) {
             for ( int j = i + i; j < check.length; j+= i) {
-                System.out.println("j = " + j);
+//                System.out.println("j = " + j);
                 check[j] = 0;
             }
         }
         for (int i : check) {
-            System.out.printf("%d ,",i);
+            if(i != 0)cnt++;
+//            System.out.printf("%d ,",i);
         }
         return cnt;
     }
 
     public static void main(String[] args) {
         에라토스테네스의체복습 a = new 에라토스테네스의체복습();
-        a.solution(10);
+        System.out.println("cnt = " + a.solution(10));
     }
 
 }
