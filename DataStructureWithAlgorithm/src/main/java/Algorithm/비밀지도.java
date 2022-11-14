@@ -21,29 +21,51 @@ public class 비밀지도 {
 
     public String solution(int n, int[] arr1, int[] arr2) {
         String answer = "";
-        String[] sArr1 = new String[n];
-        String[] sArr2 = new String[n];
-        for(int i = 0; i < arr1.length;i++){
+        String[] binaryArr1 = new String[n]; //진수를 String으로 변환해 주어야 하기 때문에 string배열 선언
+        String[] binaryArr2 = new String[n];
+        for(int i = 0; i < arr1.length;i++){ //arr1, arr2 모두 같은값으로 들어온다.
             for (int j = 0; j < n; j++) {
+                //진수를 담을 빈 배열 선언
                 String binStr1 = Integer.toBinaryString(arr1[i]);
                 String binStr2 = Integer.toBinaryString(arr2[i]);
+
+                //자리수에 맞게 0을 넣어준다.
                 if(binStr1.length() < n){
                     binStr1 = "0" + binStr1;
-                    sArr1[i] = binStr1;
+                    binaryArr1[i] = binStr1;
                 } else {
-                    sArr1[i] = binStr1;
+                    binaryArr1[i] = binStr1;
                 }
+
                 if(binStr2.length() < n){
                     binStr2 = "0" + binStr2;
-                    sArr2[i] = binStr2;
+                    binaryArr2[i] = binStr2;
                 } else {
-                    sArr2[i] = binStr2;
+                    binaryArr2[i] = binStr2;
                 }
             }
         }
-        System.out.println(Arrays.toString(sArr1));
-        System.out.println(Arrays.toString(sArr2));
+        System.out.println(Arrays.toString(binaryArr1));
+        System.out.println(Arrays.toString(binaryArr2));
 
+        return answer;
+    }
+
+    String[] solution1(int n, int[] arr1, int[] arr2) {
+        String[] answer = new String[n];
+        for (int i = 0; i < n; i++) {
+            answer[i] = Integer.toBinaryString(arr1[i] | arr2[i])
+                    .replace("1","#").replace("0", " ");
+            // 자릿수 맞춰주는 연산
+            //jdk 11부터 repeat 사용가능...ㅎㄷㄷ
+//            answer[i] = " ".repeat(n - answer[i].length()) + answer[i];
+            if(answer[i].length() < n){
+                answer[i] = " " + answer[i];
+            }
+        }
+        for (String s : answer) {
+            System.out.println(s);
+        }
         return answer;
     }
 
@@ -55,6 +77,8 @@ public class 비밀지도 {
 
         비밀지도 map = new 비밀지도();
 
-        map.solution(n,arr1,arr2);
+//        map.solution(n,arr1,arr2);
+        map.solution1(n,arr1,arr2);
+        map.solution1(	6, new int[] {46, 33, 33, 22, 31, 50}, new int[]{27, 56, 19, 14, 14, 10});
     }
 }
