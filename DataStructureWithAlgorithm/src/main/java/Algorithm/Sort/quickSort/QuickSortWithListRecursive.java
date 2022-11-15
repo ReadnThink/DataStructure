@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class QuickSort {
+public class QuickSortWithListRecursive {
     public List<Integer> merge(List<Integer> left, List<Integer> mid, List<Integer> right){
 //        System.out.println("left = " + left);
 //        System.out.println("right = " + right);
@@ -40,12 +40,14 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{20, 18, 5, 19, 5, 25, 40, 50};
+        int[] arr = new int[]{20, 18, 5, 19, 5, 25, 40, 50}; //배열
         List<Integer> arrList = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) arrList.add(arr[i]);
+        for (int i = 0; i < arr.length; i++) arrList.add(arr[i]); //list로 전환하여 sort함수에 전달
 
-        QuickSort q = new QuickSort();
+        QuickSortWithListRecursive q = new QuickSortWithListRecursive();
+        //sort전 배열
         System.out.println("Original"+Arrays.toString(arr));
+        //sort후 배열
         System.out.println("answer = "+ q.sort(arrList));
     }
 }
