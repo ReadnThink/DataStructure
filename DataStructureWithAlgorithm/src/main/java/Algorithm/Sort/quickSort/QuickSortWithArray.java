@@ -8,18 +8,27 @@ public class QuickSortWithArray {
         int i = start;
         int j = end;
         int tmp;
-        while (i < j) {
+        while (i <= j) {//원소가 1개있을경우 ??
             while (arr[i] < arr[pivot]) i++;
             while (arr[j] > arr[pivot] && j > start) j--;
             System.out.println("i = "+i);
             System.out.println("j = "+j);
+
             if(i < j){
                 tmp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = tmp;
+                i++;
+                j--;
+            }
+            if(i > j){
+                tmp = arr[j];
+                arr[j] = arr[pivot];
+                arr[pivot] = tmp;
             }
         }
-
+        sort(arr,start,pivot-1);
+        sort(arr,pivot+1,end);
     }
 
     public static void main(String[] args) {
