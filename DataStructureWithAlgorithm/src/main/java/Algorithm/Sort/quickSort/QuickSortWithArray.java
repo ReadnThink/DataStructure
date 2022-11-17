@@ -4,17 +4,17 @@ import java.util.Arrays;
 
 public class QuickSortWithArray {
     public static void sort(int[] arr, int start, int end) {
-        int pivot = arr.length / 2;
+        int pivot = (start + end) / 2;
         int i = start;
         int j = end;
         int tmp;
         while (i <= j) {//원소가 1개있을경우 ??
             while (arr[i] < arr[pivot]) i++;
-            while (arr[j] > arr[pivot] && j > start) j--;
+            while (arr[j] > arr[pivot]) j--;
             System.out.println("i = "+i);
             System.out.println("j = "+j);
 
-            if(i < j){
+            if(i <= j){ //같은경우 i++, j--를 해줘서 무한루프를 벗어나야한다.
                 tmp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = tmp;
@@ -27,8 +27,8 @@ public class QuickSortWithArray {
                 arr[pivot] = tmp;
             }
         }
-        sort(arr,start,pivot-1);
-        sort(arr,pivot+1,end);
+        if(start < pivot) sort(arr,start,pivot);
+        if(start < pivot) sort(arr,pivot+1,end);
     }
 
     public static void main(String[] args) {
