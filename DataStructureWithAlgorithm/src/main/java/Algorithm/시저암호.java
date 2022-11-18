@@ -38,17 +38,26 @@ public class 시저암호 {
     }
 
     public static String solve(String words, int n){
-        char[] arr = words.toCharArray();
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i] != 'z') arr[i] + n;
-        }
+        //z가 되면 a로 변환해야한다.
+        String answer = "";
 
-        return words;
+        for (int i = 0; i < words.length(); i++) {
+            char c = words.charAt(i);
+            for (int j = 0; j < n; j++) {
+                if ((c != 'z' && c != 'Z') && c != ' ') {
+                    c += 1;
+                } else if ((c == 'z' || c == 'Z')) {
+                    c -= 25;
+                }
+            }
+            answer += c;
+        }
+        return answer;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String words = sc.nextLine();
         int n = sc.nextInt();
-        System.out.println(solution(words, n));
+        System.out.println(solve(words, n));
     }
 }
