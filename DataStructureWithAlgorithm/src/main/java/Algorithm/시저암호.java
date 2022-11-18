@@ -58,6 +58,8 @@ public class 시저암호 {
         Scanner sc = new Scanner(System.in);
         String words = sc.nextLine();
         int n = sc.nextInt();
-        System.out.println(solve(words, n));
+        // test case : abcdefghijklmnopqrstuvwxyz
+//        System.out.println(solve(words, n));
+        System.out.println(solution(words, n));
     }
 }
