@@ -1,6 +1,6 @@
 package Recursive;
 
-public class printArrays {
+public class PrintArrays {
     public static void main(String[] args) {
         int[] arr = {7, 3, 2, 9};
         System.out.println(sum(arr, 0, 0));

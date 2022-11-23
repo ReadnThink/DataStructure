@@ -2,7 +2,7 @@ package Recursive;
 
 import java.util.Scanner;
 
-public class printStars {
+public class PrintNums {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -12,7 +12,7 @@ public class printStars {
     private static void f(int n) {
         if(n <= 0) return;
         f(n - 1);
-        System.out.print("*");
+        System.out.print(n + " ");
     }
 }
 

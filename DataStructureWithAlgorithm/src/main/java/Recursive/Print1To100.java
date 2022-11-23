@@ -1,6 +1,6 @@
 package Recursive;
 
-public class print1To100 {
+public class Print1To100 {
 
     public static void main(String[] args) {
         f(0);
