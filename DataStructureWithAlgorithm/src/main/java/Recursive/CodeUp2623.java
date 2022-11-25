@@ -17,10 +17,6 @@ public class CodeUp2623 {
     private static int f(int a, int b) {
         if(a == b) return a;
 
-        if(a > b){
-            return f(a - b, b);
-        }else {
-            return f(a, b - a);
-        }
+        return a > b ? f(a - b, b) : f(a, b - a);
     }
 }
