@@ -29,10 +29,17 @@ public class CodeUp2623 {
         int max = a > b ? a : b;
         int min = a > b ? b : a;
 
+        int tmp;
         while (max > min) {
             max -= min;
+            if (max < min) {
+                tmp = max;
+                max = min;
+                min = tmp;
+            }
         }
+
         if(max == min) return max;
-        else return -1;
+        else return 1;
     }
 }
