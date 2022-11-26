@@ -19,12 +19,12 @@ public class CodeUp1857 {
         }
         else {
             for (int i = 1; i <= a; i++) {
-                if (!isUsed[i]) {
+//                if (!isUsed[i]) {
                     arr[k] = i;
-                    isUsed[i] = true;
+//                    isUsed[i] = true;
                     func(k + 1);
-                    isUsed[i] = false;
-                }
+//                    isUsed[i] = false;
+//                }
             }
         }
     }

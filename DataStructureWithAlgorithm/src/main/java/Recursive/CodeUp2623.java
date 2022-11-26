@@ -12,10 +12,24 @@ public class CodeUp2623 {
         int b = sc.nextInt();
 
         //재귀
-        System.out.println(f(a, b));
+//        System.out.println(f(a, b));
 
         // 재귀없이
-        System.out.println(solution(a, b));
+//        System.out.println(solution(a, b));
+
+        //꼬리재귀 빼기
+        recul(3);
+        recul(4);
+    }
+
+    private static void recul(int n) {
+//        if(n <= 0) return;
+        while(n > 0){
+            recul(n - 1);
+            System.out.println(n);
+//        recul(n - 2);
+            n -= 2;
+        }
     }
 
     private static int f(int a, int b) {
@@ -42,4 +56,6 @@ public class CodeUp2623 {
         if(max == min) return max;
         else return 1;
     }
+
+
 }
