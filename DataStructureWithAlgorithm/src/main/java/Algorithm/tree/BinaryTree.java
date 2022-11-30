@@ -1,19 +1,19 @@
 package Algorithm.tree;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class BinaryTree {
-
     static int cnt;
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] n = br.readLine().split(" ");
 
-        System.out.println(tree(a, b));
+        System.out.println(tree(Integer.parseInt(n[0]), Integer.parseInt(n[1])));
     }
-
     private static int tree(int a, int b) {
         if(a == b){
             return cnt;
