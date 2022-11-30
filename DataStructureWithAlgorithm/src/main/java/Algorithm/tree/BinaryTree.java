@@ -15,12 +15,14 @@ public class BinaryTree {
     }
 
     private static int tree(int a, int b) {
-        if(a / 2 == b / 2){
-            return cnt++;
+        if(a == b){
+            return cnt;
         } else {
-            if(a != 1) cnt++;
-            if(b != 1) cnt++;
-            tree(a / 2, b / 2);
+            cnt++;
+            //큰 노드를 한칸 이동시킨다.
+            //나누기 2를하면 부모를 찾을 수 있다.
+            if(a > b) tree(a / 2, b);
+            else if (a < b) tree(a, b / 2);
         }
         return cnt;
     }
