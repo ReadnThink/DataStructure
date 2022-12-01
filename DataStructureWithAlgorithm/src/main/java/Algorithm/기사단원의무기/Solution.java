@@ -3,8 +3,13 @@ package Algorithm.기사단원의무기;
 public class Solution {
     public static int checkDivisor(int n) {
         int cnt = 0;
-        for (int i = 1; i <= n; i++) {
-            if(n % i == 0)cnt++;
+        for (int i = 1; i * i <= n; i++) {
+            if(n % i == 0){
+                cnt++;
+                if(i * i < n){
+                    cnt++;
+                }
+            }
         }
         return cnt;
     }
@@ -39,7 +44,7 @@ public class Solution {
         return answer;
     }
     public static void main(String[] args) {
-//        System.out.println(solution(5, 3, 2));
+        System.out.println(solution(5, 3, 2));
         System.out.println(solution(10, 3, 2));
     }
 }

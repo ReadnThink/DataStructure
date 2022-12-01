@@ -48,9 +48,9 @@ public class 연습에라토스테네스의체Array {
     }
 
     public static void main(String[] args) {
-        int n = 50;
-        solutionWithCheck(n);
+        int n = 3;
+//        solutionWithCheck(n);
 //        System.out.println();
-//        solutionOnly(n);
+        solutionOnly(n);
     }
 }

@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class Mine {
-
     private static int[] solution(int k, int[] score) {
         int[] answer = new int[score.length];
         //낮은 숫자가 우선인 우선순위 큐 (명예의 전당를 담당)
