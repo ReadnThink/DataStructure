@@ -1,5 +1,7 @@
 package Algorithm.소인수분해;
 
+import java.util.Scanner;
+
 public class CodeUp4037 {
 /*
     소인수분해
@@ -20,6 +22,9 @@ public class CodeUp4037 {
     }
 
     public static void main(String[] args) {
-        findPrimeFactor(72);
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        findPrimeFactor(n);
+//        findPrimeFactor(72);
     }
 }
