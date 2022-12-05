@@ -13,16 +13,18 @@ public class heapArray {
     private static void heap(int[] arr) {
         int tmp = 0;
         for (int i = 0; i < arr.length; i++) {
-            if(arr.length <= i * 2 + 2) break;
-            if (arr[i] < arr[i * 2 + 1]) {
+            int leftIdx = i * 2 + 1;
+            int rightIdx = i * 2 + 2;
+            if(arr.length <= rightIdx) break;
+            if (arr[i] < arr[leftIdx]) {
                 tmp = arr[i];
-                arr[i] = arr[i * 2 + 1];
-                arr[i * 2 + 1] = tmp;
+                arr[i] = arr[leftIdx];
+                arr[leftIdx] = tmp;
             }
-            if (arr[i] < arr[i * 2 + 2]) {
+            if (arr[i] < arr[rightIdx]) {
                 tmp = arr[i];
-                arr[i] = arr[i * 2 + 2];
-                arr[i * 2 + 2] = tmp;
+                arr[i] = arr[rightIdx];
+                arr[rightIdx] = tmp;
             }
         }
         System.out.println("Heap   = " + Arrays.toString(arr));
