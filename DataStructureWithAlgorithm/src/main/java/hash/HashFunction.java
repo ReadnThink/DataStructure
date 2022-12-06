@@ -19,6 +19,7 @@ public class HashFunction {
             asciiSum += key.charAt(i);
         }
         //문자열이 들어오면 하니씩 아스키코드로 변환하여 그 값들의 합을 리턴한다.
+        System.out.println(asciiSum);
         return asciiSum % 90;
     }
 
