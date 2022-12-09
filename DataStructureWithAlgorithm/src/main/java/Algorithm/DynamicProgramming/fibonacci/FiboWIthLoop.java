@@ -1,4 +1,4 @@
-package Algorithm.DynamicProgramming;
+package Algorithm.DynamicProgramming.fibonacci;
 
 public class FiboWIthLoop {
     static int[] dp;
@@ -13,7 +13,7 @@ public class FiboWIthLoop {
     }
 
     public static void main(String[] args) {
-        int n = 5;
+        int n = 1;
         dp = new int[n + 1];
         System.out.println(fibo(n));
     }

@@ -1,4 +1,4 @@
-package Algorithm.DynamicProgramming;
+package Algorithm.DynamicProgramming.fibonacci;
 
 public class Fibonacci {
 
