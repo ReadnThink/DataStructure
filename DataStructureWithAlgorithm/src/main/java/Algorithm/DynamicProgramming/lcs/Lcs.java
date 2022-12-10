@@ -15,11 +15,6 @@ public class Lcs {
         int[][] dp = new int[str2.length() + 1][str1.length() + 1];
         for (int i = 1; i <= str2.length(); i++) {
             for (int j = 1; j <= str1.length(); j++) {
-//                System.out.printf("i : %s j : %s \n", str2.charAt(i -1), str1.charAt(j - 1));
-                //위에가 0이 아니면 아래는 위에 숫자
-//                if (str2.charAt(i) != str1.charAt(j)) {
-//                    dp[i][j] = dp[i - 1][j - 1];
-//                }
                 if (i == 0 || j == 0) {
                     dp[i][j] = 0;
                 }
@@ -33,6 +28,7 @@ public class Lcs {
                 }
             }
         }
+        System.out.println(Arrays.deepToString(dp));
         int answer = dp[str2.length()][str1.length()];
         System.out.println(answer);
 //        System.out.println(Arrays.deepToString(dp));
