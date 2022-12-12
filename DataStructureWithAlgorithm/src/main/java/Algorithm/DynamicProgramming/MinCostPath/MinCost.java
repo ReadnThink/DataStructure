@@ -12,10 +12,15 @@ public class MinCost {
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
+                // 첫번째 칸 세팅
                 if(i == 0 && j == 0)
                     dp[0][0] = arr[0][0];
+                // 첫번째 줄 계산
                 else if (i == 0)
                     dp[i][j] = dp[i][j - 1] + arr[i][j];
+                else if (j == 0 && i > 0)
+                    dp[i][j] = dp[i - 1][j] + arr[i][j];
+
             }
         }
         for (int i = 0; i < dp.length; i++) {
