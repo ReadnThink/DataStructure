@@ -15,11 +15,17 @@ public class MinCost {
                 // 첫번째 칸 세팅
                 if(i == 0 && j == 0)
                     dp[0][0] = arr[0][0];
-                // 첫번째 줄 계산
+                // 첫번째 열 계산
                 else if (i == 0)
                     dp[i][j] = dp[i][j - 1] + arr[i][j];
+                // 첫번째 열 계산
                 else if (j == 0 && i > 0)
                     dp[i][j] = dp[i - 1][j] + arr[i][j];
+                // 나머지 칸 계산
+                else
+                    dp[i][j] = Math.min(
+                            Math.min(dp[i - 1][j] + arr[i][j],dp[i][j - 1]+ arr[i][j]),
+                            dp[i - 1][j - 1]+ arr[i][j]);
 
             }
         }
