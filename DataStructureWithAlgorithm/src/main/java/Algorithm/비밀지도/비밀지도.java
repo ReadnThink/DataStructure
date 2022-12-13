@@ -1,8 +1,6 @@
-package Algorithm;
+package Algorithm.비밀지도;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class 비밀지도 {

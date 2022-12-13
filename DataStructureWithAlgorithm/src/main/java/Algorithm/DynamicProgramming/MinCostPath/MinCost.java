@@ -19,14 +19,14 @@ public class MinCost {
                 else if (i == 0)
                     dp[i][j] = dp[i][j - 1] + arr[i][j];
                 // 첫번째 열 계산
-                else if (j == 0 && i > 0)
+                else if (j == 0)
                     dp[i][j] = dp[i - 1][j] + arr[i][j];
                 // 나머지 칸 계산
                 else
-                    dp[i][j] = Math.min(
-                            Math.min(dp[i - 1][j] + arr[i][j],dp[i][j - 1]+ arr[i][j]),
-                            dp[i - 1][j - 1]+ arr[i][j]);
-
+                    dp[i][j] =
+                            Math.min(
+                            Math.min(dp[i - 1][j],dp[i][j - 1]),
+                            dp[i - 1][j - 1]) + arr[i][j];
             }
         }
         for (int i = 0; i < dp.length; i++) {
@@ -43,5 +43,4 @@ public class MinCost {
                 };
         m.getMinCost(arr);
     }
-
 }
