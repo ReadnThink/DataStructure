@@ -1,7 +1,5 @@
 package Algorithm.DynamicProgramming.MinCostPath;
 
-import Algorithm.소수찾기.에라토스테네스의체Array;
-
 import java.util.Arrays;
 
 public class MinCost {
@@ -18,7 +16,7 @@ public class MinCost {
                 // 첫번째 열 계산
                 else if (i == 0)
                     dp[i][j] = dp[i][j - 1] + arr[i][j];
-                // 첫번째 열 계산
+                // 첫번째 행 계산
                 else if (j == 0)
                     dp[i][j] = dp[i - 1][j] + arr[i][j];
                 // 나머지 칸 계산

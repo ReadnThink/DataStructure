@@ -45,7 +45,9 @@ public class OptimalStrategy3 {
                 //내가 40(right)을 선택하면 상대방이 2, 7중에 최적 선택을 하는 경우와 같습니다.
                 // 그러므로 왼쪽칸 7, 2의 두번재 값을 내가 가지고 와야 합니다. 그래서 40+2 = 42가 됩니다.
                 // j가 0일때 왼쪽칸은? dp[j][j+i-1] --> dp[0][1]
+                System.out.println("x");
                 int x = coinRight + dp[j][j+i-1].right;
+                System.out.println("x = "+x);
 
                 // dp[0][1] 0, 2
                 //         dp[1][2]
@@ -53,7 +55,9 @@ public class OptimalStrategy3 {
                 //내가 2(left)를 선택하면 상대방이 40, 7중에 최적 선택을 하는 경우와 같습니다.
                 // 그러므로 아래칸 40, 7의 두번재 값을 내가 가지고 와야 합니다. 그래서 2 + 7 = 9가 됩니다.
                 // j가 0일때 아래칸은? dp[j+1][j+i] --> dp[1][2]
+                System.out.println("y");
                 int y = coinLeft + dp[j+1][j+i].right;
+                System.out.println("y = "+y);
 
                 // 상대방은 왼쪽과 아래칸의 왼쪽 값 중 작은 값이 상대방의 최적이 됩니다.
                 int second = Math.min(dp[j+1][j+i].left, dp[j][j+i-1].left);

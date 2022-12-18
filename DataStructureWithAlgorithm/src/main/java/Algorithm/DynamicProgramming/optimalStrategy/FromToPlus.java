@@ -8,7 +8,6 @@ public class FromToPlus {
         int[] arr = new int[]{2, 7, 40, 19};
         int[][] dp = new int[arr.length][arr.length];
 
-
         for (int i = 0; i < arr.length; i++) {
             dp[i][i] = arr[i];
             for (int j = i; j < arr.length; j++) {
